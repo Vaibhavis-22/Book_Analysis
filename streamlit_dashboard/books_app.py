@@ -9,7 +9,7 @@ import json
 # ---------- Load Data from GitHub ----------
 @st.cache_data(ttl=3600)  # refresh every hour
 def load_data():
-       parquet_url = "https://raw.githubusercontent.com/Vaibhavis-22/Book_analysis/main/data/book_word_frequencies.parquet"
+    parquet_url = "https://raw.githubusercontent.com/Vaibhavis-22/Book_analysis/main/data/book_word_frequencies.parquet"
     json_url = "https://raw.githubusercontent.com/Vaibhavis-22/Book_analysis/main/data/top_100_books_data.json"
 
     word_freq_df = pd.read_parquet(parquet_url, engine="pyarrow")
